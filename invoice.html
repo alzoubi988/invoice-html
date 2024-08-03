@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>فاتورة</title>
+<style>
+  body {
+    font-family: 'Arial', sans-serif;
+    direction: rtl; /* تحديد الاتجاه من اليمين إلى اليسار */
+  }
+  .company-name {
+    text-align: center; /* مركز النص في وسط الصفحة */
+    font-size: 24px; /* حجم الخط */
+    font-weight: bold; /* غلظة الخط */
+    margin-top: 20px;
+  }
+  .customer-info {
+    text-align: right; /* تعديل اتجاه النص إلى اليمين */
+    margin-top: 10px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    direction: rtl; /* تحديد الاتجاه من اليمين إلى اليسار للجدول */
+  }
+  th, td {
+    border: 1px solid #000;
+    padding: 8px;
+    text-align: right; /* تعديل اتجاه النص إلى اليمين */
+  }
+  th {
+    background-color: #f2f2f2;
+  }
+  .footer {
+    margin-top: 20px;
+    text-align: center;
+  }
+  .total {
+    text-align: right; /* تعديل اتجاه النص إلى اليمين للمجموع الكلي */
+  }
+</style>
+</head>
+<body>
+
+<div class="company-name">
+  الصقور الحجازية التجارية
+</div><div class="company-name">
+  فحم الهيبة
+</div>
+
+<div class="customer-info">
+  اسم العميل: {customerName}
+</div>
+
+<table>
+  <tr>
+    <th>تاريخ الإصدار</th>
+    <th>الصنف</th>
+    <th>الكمية</th>
+    <th>سعر الحبة</th>
+  </tr>
+  <tr>
+    <td>{date1}</td>
+    <td>{item1}</td>
+    <td>{Q1}</td>
+    <td>{Price1}</td>
+  </tr>
+  <tr>
+    <td>{date2}</td>
+    <td>{item2}</td>
+    <td>{Q2}</td>
+    <td>{Price2}</td>
+  </tr>
+  <tr>
+    <td>{date3}</td>
+    <td>{item3}</td>
+    <td>{Q3}</td>
+    <td>{Price3}</td>
+  </tr>
+  <tr>
+    <td>{date4}</td>
+    <td>{item4}</td>
+    <td>{Q4}</td>
+    <td>{Price4}</td>
+  </tr>
+  <!-- أضف المزيد من الصفوف حسب البيانات الموجودة في الصورة -->
+</table>
+
+<div class="total">
+  <p>المجموع الكلي: {total}</p>
+</div>
+
+<div class="footer">
+  <p>شكرًا لك على تعاملك معنا!</p>
+</div>
+
+</body>
+</html>
